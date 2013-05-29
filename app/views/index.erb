@@ -1,0 +1,39 @@
+<div class="container">
+
+  <h1>Die Roles</h1>
+
+  <form method="post" action="/roll">
+    <input type="submit" value="roll"/>
+  </form>
+
+  <ol class="die-roles" data-num="<%= @roles %>">
+  <!--<script>
+    DieRoles = {};
+
+    DieRoles.render = function(){
+
+      var elements = $();
+      var roles = [];
+      $.ajax({
+        type: 'get',
+        url: '/roles',
+        async: false
+      }).done(function(data){
+        roles = data;
+      });
+
+      roles.forEach(function(role){
+        elements = elements.add($('<li>').text(role));
+      });
+
+      return elements;
+    };
+
+    $(function(){
+      $('.die-roles').html(DieRoles.render());
+    });
+
+  </script>-->
+  </ol>
+
+</div>
