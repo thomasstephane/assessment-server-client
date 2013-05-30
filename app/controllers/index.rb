@@ -1,7 +1,13 @@
+
+
 get '/' do
   @roles = dice_roles.roles
-  cookies[:roles] = @roles
-  p cookies
+  # cookies["roles"] = 
+  response.set_cookie("roles", {
+      :expires => Time.now + 24000,
+      :value => @roles,
+      :domain => ''
+    })
   erb :index
 end
 
